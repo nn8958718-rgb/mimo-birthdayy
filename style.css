@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;500;600;700&display=swap');
+
+:root {
+  --pink: #f4dce5;
+  --rose: #b85e78;
+  --deep-rose: #71394d;
+  --cream: #fffaf8;
+  --ink: #49343d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: linear-gradient(145deg, #fff9f8, #f7e3eb 55%, #f1d6e1);
+  font-family: 'Nunito', sans-serif;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 13px 24px;
+  color: white;
+  background: var(--rose);
+  font: 700 1rem 'Nunito', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 8px 20px #9e53652b;
+  transition: transform .2s, background .2s;
+}
+
+button:hover { transform: translateY(-2px); background: var(--deep-rose); }
+
+.birthday-site {
+  width: min(100% - 32px, 760px);
+  margin: 0 auto;
+  padding: 48px 0 70px;
+  text-align: center;
+}
+
+.intro-screen, .surprise-screen, .letter-screen {
+  animation: fade-in .8s ease both;
+}
+
+.eyebrow {
+  color: var(--rose);
+  text-transform: uppercase;
+  letter-spacing: .22em;
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+h1, h2 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 400;
+}
+
+h1 {
+  margin: 10px 0;
+  color: var(--deep-rose);
+  font-size: clamp(2.5rem, 8vw, 4.7rem);
+}
+
+.intro-note { color: #80636e; }
+
+.cake-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 30px auto 0;
+  padding: 14px 14px 18px;
+  color: var(--deep-rose);
+  background: #fffaf8;
+  border: 1px solid #edcbd8;
+  border-radius: 24px;
+}
+
+.cake-button img {
+  display: block;
+  width: min(100%, 340px);
+  height: 245px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.cake-button span { font-weight: 700; }
+
+.hidden { display: none !important; }
+
+.surprise-screen, .letter-screen { margin-top: 24px; }
+
+.heart-scene {
+  min-height: 210px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  margin-bottom: 24px;
+  border-radius: 28px;
+  background: radial-gradient(circle, #fff 0, #f8dce7 45%, #edc4d4 100%);
+  overflow: hidden;
+}
+
+.glow-heart {
+  color: #c34f73;
+  font-size: 5rem;
+  text-shadow: 0 0 12px #f49bb9, 0 0 34px #e7799f;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.surprise-caption { color: var(--deep-rose); }
+
+.birthday-card, .letter-paper {
+  padding: 24px;
+  border: 1px solid #edcbd8;
+  border-radius: 24px;
+  background: #fffaf8eF;
+  box-shadow: 0 16px 45px #8b52631a;
+}
+
+.birthday-image, .envelope-wrap img, .nineteen-image, .quote-image {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.birthday-card h2, .letter-paper h2 {
+  color: var(--deep-rose);
+  font-size: 2rem;
+}
+
+.birthday-card button { margin-top: 12px; }
+
+.envelope-wrap { max-width: 420px; margin: 0 auto 22px; }
+
+.letter-paper {
+  max-width: 620px;
+  margin: 0 auto 22px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.letter-placeholder { min-height: 90px; color: #765d67; }
+.signature { margin-top: 28px; color: var(--rose); font-family: 'DM Serif Display', Georgia, serif; font-size: 1.4rem; }
+.nineteen-image, .quote-image { max-width: 620px; margin: 18px auto; }
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.13); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.08); }
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 520px) {
+  .birthday-site { padding-top: 32px; }
+  .cake-button img { height: 210px; }
+  .birthday-card, .letter-paper { padding: 18px; }
+}

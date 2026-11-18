@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8e8ee">
+  <title>Happy Birthday, Mimo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="birthday-site">
+    <section class="intro-screen" id="intro">
+      <p class="eyebrow">A little surprise for you</p>
+      <h1>Happy Birthday, Mimo</h1>
+      <p class="intro-note">I made something special just for you.</p>
+      <button class="cake-button" id="cakeButton" type="button" aria-label="Open your birthday surprise">
+        <img src="cake.jpg" alt="Birthday cake">
+        <span>Tap the cake</span>
+      </button>
+    </section>
+
+    <section class="surprise-screen hidden" id="surprise" aria-live="polite">
+      <div class="heart-scene" id="heartScene">
+        <span class="glow-heart">♥</span>
+        <p class="surprise-caption">A little piece of my heart, for you.</p>
+      </div>
+      <div class="birthday-card">
+        <img class="birthday-image" src="birthday.jpg" alt="Birthday decorations">
+        <h2>For you, Mimo</h2>
+        <p>Every part of this little page was made with care.</p>
+        <button id="openLetterButton" type="button">Open your letter</button>
+      </div>
+    </section>
+
+    <section class="letter-screen hidden" id="letter">
+      <div class="envelope-wrap">
+        <img src="letter-envelope.jpg" alt="A special letter">
+      </div>
+      <article class="letter-paper">
+        <p class="eyebrow">A letter for you</p>
+        <h2>Dear Mimo,</h2>
+        <p class="letter-placeholder">Your personal letter will go here. We will add your message when you send it to me.</p>
+        <p class="signature">With love</p>
+      </article>
+      <img class="nineteen-image" src="nineteen.jpg" alt="Birthday number 19">
+      <img class="quote-image" src="quote.jpg" alt="A birthday quote">
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
